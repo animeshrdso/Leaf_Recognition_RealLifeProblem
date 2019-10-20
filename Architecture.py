@@ -1,7 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[ ]:
 
 
 import numpy as np
@@ -30,8 +27,6 @@ import tensorflow as tf
 import keras
 
 
-# In[ ]:
-
 
 DATADIR = '/kaggle/input/dataset/train'
 # CATEGORIES = os.listdir(DATADIR)
@@ -41,7 +36,6 @@ train_dir = os.path.join(DATADIR)
 test_dir = os.path.join(DATADIR1)
 
 
-# In[ ]:
 
 
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
@@ -57,7 +51,6 @@ validation_generator = train_datagen.flow_from_directory(test_dir ,
                                                     class_mode = "categorical" )
 
 
-# In[ ]:
 
 
 def inception_block(X, filters, stage, block):
@@ -146,8 +139,6 @@ history = model.fit_generator(train_generator,
 from IPython.display import FileLink
 FileLink(r'Final_Model.h5')
 
-
-# In[ ]:
 
 
 
