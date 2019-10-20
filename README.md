@@ -20,4 +20,10 @@ Looking at the dataset the images were highly augmented and was seemingly captur
 * Running the function inception_block and DeceptiNet built from scratch.
 * Compiling and fitting of our model to get the scores.
 
+# How to use
+Concatenate all the python files and run the code.
+
+# Result
+At an epoch of 50 and a batch size of 32, the model gives an accuracy of 86.45% on the test set.
+
 
