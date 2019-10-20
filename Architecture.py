@@ -28,31 +28,20 @@ import keras
 
 
 
-#DATADIR = '/kaggle/input/dataset/train'
-# CATEGORIES = os.listdir(DATADIR)
-#DATADIR1 = '/kaggle/input/dataset/test'
-# CATEGORIES1 = os.listdir(DATADIR1)
-#train_dir = os.path.join(DATADIR)
-#test_dir = os.path.join(DATADIR1)
-
-
-
 
 #from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 #train_datagen = ImageDataGenerator(rescale = 1. / 255)
 #train_generator = train_datagen.flow_from_directory(train_dir ,
                                                     #target_size = (224 , 224) ,
-                                                    #batch_size = 32 ,
                                                     #class_mode = "categorical" )
 #validation_generator = train_datagen.flow_from_directory(test_dir ,
                                                     #target_size = (224 , 224) ,
-                                                    #batch_size = 32 ,
                                                     #class_mode = "categorical" )
 
 
-
-
+batch_size = 32 
+ 
 def inception_block(X, filters, stage, block):
     """  
     Returns:
