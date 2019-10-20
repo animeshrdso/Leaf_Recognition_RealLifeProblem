@@ -18,7 +18,7 @@ for category in CATEGORIES:  # do dogs and cats
     break
 
 training_data = []
-IMG_SIZE=244
+IMG_SIZE=224
 
 def create_training_data():
     for category in CATEGORIES:  # do dogs and cats
