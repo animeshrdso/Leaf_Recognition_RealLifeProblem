@@ -17,7 +17,7 @@ Looking at the dataset the images were highly augmented and was seemingly captur
 * Loading of the dataset which contains train and test folders which contains images of 185 different classes.
 * Stacking of all the images using their path by os for both train and test data.
 * Getting features and labels in this created data for both train and test.
-* Running the function inception_block and DeceptiNet built from scratch.
+* Running the function inception_block and DeceptiNet.
 * Compiling and fitting of our model to get the scores.
 
 # How to use
