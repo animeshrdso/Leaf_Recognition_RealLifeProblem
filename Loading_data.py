@@ -8,10 +8,10 @@ DATADIR = "/content/dataset/train"
 
 CATEGORIES = os.listdir(DATADIR)
 
-for category in CATEGORIES:  # do dogs and cats
-    path = os.path.join(DATADIR,category)  # create path to dogs and cats
-    for img in os.listdir(path):  # iterate over each image per dogs and cats
-        img_array = cv2.imread(os.path.join(path,img))  # convert to array
+for category in CATEGORIES:  
+    path = os.path.join(DATADIR,category)  
+    for img in os.listdir(path):  
+        img_array = cv2.imread(os.path.join(path,img))  
         plt.imshow(img_array, cmap='gray')  # graph it
         plt.show() 
         break  
@@ -21,12 +21,12 @@ training_data = []
 IMG_SIZE=224
 
 def create_training_data():
-    for category in CATEGORIES:  # do dogs and cats
+    for category in CATEGORIES:  
 
-        path = os.path.join(DATADIR,category)  # create path to dogs and cats
-        class_num = CATEGORIES.index(category)  # get the classification  (0 or a 1). 0=dog 1=cat
+        path = os.path.join(DATADIR,category)  
+        class_num = CATEGORIES.index(category)  
 
-        for img in tqdm(os.listdir(path)):  # iterate over each image per dogs and cats
+        for img in tqdm(os.listdir(path)):  
             try:
                 img_array = cv2.imread(os.path.join(path,img))  # convert to array
                 training_data.append([img_array, class_num])  # add this to our training_data
@@ -45,9 +45,9 @@ DATADIR1 = "/content/dataset/test"
 
 CATEGORIES1 = os.listdir(DATADIR1)
 
-for category in CATEGORIES1:  # do dogs and cats
-    path = os.path.join(DATADIR1,category)  # create path to dogs and cats
-    for img in os.listdir(path):  # iterate over each image per dogs and cats
+for category in CATEGORIES1: 
+    path = os.path.join(DATADIR1,category)  
+    for img in os.listdir(path):  
         img_array = cv2.imread(os.path.join(path,img))  # convert to array
         plt.imshow(img_array)  # graph it
         plt.show() 
